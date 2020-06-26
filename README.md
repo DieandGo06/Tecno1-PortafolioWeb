@@ -7,7 +7,7 @@ saber cuantos años pasaran para poder volver a verse, prefieren terminar su rel
 de pasar el restos de sus años  arraigados a un futuro incierto y distante.
 
 Ha pasado un año desde entonces, y a pesar de sus esfuerzos para distanciarse, siguen hablando
-como si estivieran junto. Sin emabrgo, ella se ha empezado a distanciar y de forma repentina 
+como si estivieran juntos. Sin emabrgo, ella se ha empezado a distanciar y de forma repentina 
 pero a su vez, esperada... "Amor, avisame cuando estes libre, necesito contarte algo."
 
 
