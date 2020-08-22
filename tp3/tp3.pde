@@ -1310,7 +1310,7 @@ textAlign(LEFT); fill(blanco); text(m8E, posXt1,posYt, anchXt, altoYt); posYt+= 
   fill(#496EA3); rect(0,0, width, 80);
   fill(blanco); rect ((width-anchX)-margen,(height-rLn1)-margen, anchX, rLn1,B,B,B,B); 
   String reiniciar= "A = adelantar R= Reiniciar";
-  fill(#DADADA); text (reiniciar, 345, 565);
+  textAlign(LEFT); fill(#DADADA); text (reiniciar, 345, 565);
   
   image (Perfil, 25,12);
   
