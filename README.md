@@ -12,3 +12,7 @@ La idea principal detras de estos es, de alguna u otra forma, justificar tanto l
 Es por ello que, en cualquier momento, antes de una elección, la persona podrá ir a jugar. Por otro lado, al jugador se le darán pistas claras sobre el funcionamiento de esta mecánica desde un inicio, pero se intentará que nunca sea del todo explicito.
 
 Por último, el juego tendrá 3 niveles, cuya dificultad variará enormente en base a la ansiedad. 
+
+En cuanto al diagrama de flujo de la novela gráfica, hubo cambios significativos. La estructura base se mantiene, pero, en base a las correciones del pasado tp, se agregaron muchas más elecciones y se eliminaron muchos mensajes que no aportaban a la narrativa, acortando la duración historia. Sin embargo, la mayoría de estas nuevas lineas de diálogo, no implican cambios reales, más allá del tono de la conversación y los niveles de ansiedad. 
+
+Estos dos tipos de elecciones se diferencian en el diagrama de flujo por sus colores. Los retángulos amarillos no implican cambios, mientras que los morados, si. No obstante, una vez dentro de la novela, el jugador no sabrá cual es cual.
