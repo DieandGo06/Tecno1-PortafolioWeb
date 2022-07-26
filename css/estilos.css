@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,300&display=swap');
+
+h5, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.encabezado-nombre{
+  padding-left: 25px;
+}
+
+.encabezado-menu{
+  padding-right: 25px;
+}
+
+.parallax-container {
+  height: 750px;
+}
+
+.proyectos{
+  padding-top: 30px;
+  margin-left: 10px;
+}
+
+.quitar-margen {
+  margin: -15px -15px -41px -15px;
+}
+
+.texto-descripcion {
+  margin-bottom: -20px;
+  padding-left: 10px;
+}
+
+.titulos{
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.subtitulos{
+  padding-top: 30px;
+}
+
+.navegacion {
+  text-decoration: none;
+  position: fixed;
+  bottom:30%;
+}
+
+.pasos{
+  padding-top: 5px;
+  margin-bottom: -12px;
+  font-size: 16px;
+}
+
+.-margin-top{
+  margin-top: -6px;
+}
+
+.pre-codigo{
+  padding-bottom: 10px;
+}
+
+.codigo {
+  margin-left: 30px;
+}
+
+.codigo1{
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: -10px;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+.codigo2{
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: -10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.codigo3{
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: -10px;
+  margin-left: 40px;
+  font-size: 12px;
+}
+
+.codigo4{
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: -10px;
+  margin-left: 60px;
+  font-size: 12px;
+}
+
+.inicio {
+  margin-top: -3px;
+}
+
+.final{
+  margin-bottom: -2px;
+}
+
+.imagen-ilustrativa{
+  margin-top: 32px;
+}
+
+.sub-menu {
+  margin-bottom: 15px;
+}
+
+.paso3{
+  margin-top: -15px;
+}
+
+.pie {
+  margin-left: -23px;
+}

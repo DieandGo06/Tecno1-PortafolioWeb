@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Diego Jiménez TP#Web 2</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/estilos.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <nav class="#212121 grey darken-4">
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo"><span class="encabezado-nombre"> Diego Jimenez </span></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#header-novela">Novela Grafica</a></li>
+      <li><a href="#header-juego">Videojuego
+      <li><a href="#header-circulo"><span class="encabezado-menu">Circulo Cromatico</span></a></li>
+    </ul>
+  </div>
+  </nav>
+  <!-- Portada -->
+  <div class="parallax-container">
+      <div class="parallax"><img src="img/nier-portada.jpg"></div>
+  </div>
+
+
+  <!-- Cuerpo -->
+  <div class="container">
+    <h4 class="proyectos">Mis Proyectos</h4>
+
+    <!-- Novela Grafica -->
+    <div class = "row" id="header-novela">
+      <div class = "col s12 m12 l12 xl10">
+        <ul class="collapsible">
+          <li>
+            <!-- Header -->
+            <div class="collapsible-header">
+              <div class = "row">
+                <!-- Columna 1 -->
+                <div class = "col s12 m12 l12 xl12">
+                  <div class="quitar-margen"><img src="img/tp-final-card.jpg" alt="Luis" class="responsive-img"></div>
+                </div>
+                <!-- Columna 2 -->
+                <div class = "col s12 m12 l12 xl12">
+                  <h5 class="titulos">Novela Grafica</h5>
+                  <p class="texto-descripcion">Una pareja separada por la distancia se forzada a cortar lo poco que queda de su relación. No es una conversación sencilla y ninguno de los dos lo quiere hacer, pero ambos son saben cuanto daño puede causar el esperar durante años y reecuentro que nunca parece llegar.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Body -->
+            <div class="collapsible-body">
+              <div class="row">
+                <div class="col s12 l12">
+                    <!-- Introduccion -->
+                    <h5>¿De qué se trata?</h5>
+                    <p>La novela grafica fue creada con objetos en java e intenta simular un chat de telefono, en donde, por medio de cronometros, se despliegan todos los mensajes. Así mismo, el jugador puede elegir el tono y rumbo de la historia mediante multiples elecciones. Cada ruta aporta nueva información al jugador, apliando el contexto de la situación con cada partida, pudiendo llegar a más de 10 finales distintos.</p>
+
+                    <!-- Hablemos del codigo -->
+                    <h5 class="subtitulos">Hablemos un poco del código</h5>
+                    <p>Aunque en principio parece sencillo recrear un chat, hay muchos problemas a resolver. Uno de ellos es el generar un método el cual permita que el rectángulo que encierra al texto, se adapte con facilidad al ancho y alto del texto, sumado a la posición del mismo la cual varia según de quien sea el mensaje y la extensión del mismo.</p>
+
+                    <!-- Explicación y codigo 1 -->
+                    <div class = "row">
+                      <div class = "col s12 m12 l12">
+                        <h5 class="pasos">Paso 1</h5>
+                        <p class="pre-codigo">Primero es necesario definir el texto de los mensajes en un arreglo y usar otro para almacenar el ancho de estos (los comentarios indican de quien es el mensaje).</p>
+                        <!-- Codigo -->
+                        <div class="card #f5f5f5 grey lighten-4">
+                          <div class="card-content black-text">
+                            <div class="codigo">
+                             <p class="codigo1 inicio">String [] texto1 = { </p>
+                             <p class="codigo2">/* h */    "Cómo dormiste?", </p>
+                             <p class="codigo2">/* m */    "bien y tu?" </p>
+                             <p class="codigo1">} </p>
+                             <p class="codigo1 final">float [] anchoTexto1 = new float [texto1.length]; </p>
+                           </div>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Explicación y codigo 2 -->
+                    <div class = "row">
+                      <div class = "col s12 m12 l12">
+                        <h5 class="pasos">Paso 2</h5>
+                        <p class="pre-codigo">Lo siguiente es definir y calcular el ancho y posicion del rectangulo y texto.</p>
+                        <!-- Codigo-->
+                        <div class="card #f5f5f5 grey lighten-4">
+                          <div class="card-content black-text">
+                            <div class="codigo">
+                              <p class="codigo1 inicio">void calcular (float p_anchoTexto1) {</p>
+                              <p class="codigo2">if (posXinicial == posXpersona1) {</p>
+                              <p class="codigo3">posXfinal = p_anchoTexto1 + anchoExtraX;</p>
+                              <p class="codigo2">}</p>
+                              <p class="codigo2">if (posXinicial == posXpersona2) {</p>
+                              <p class="codigo3">posXfinal = width - p_anchoTexto1 - anchoExtraX;</p>
+                              <p class="codigo2">}</p>
+                              <p class="codigo2">anchoRectangulo = p_anchoTexto1 + anchoExtraX;</p>
+                              <p class="codigo2">anchoMaximoTexto = posXfinal + p_anchoTexto1;</p>
+                              <p class="codigo2">altoRectangulo = posYtexto + altoTexto;</p>
+                              <p class="codigo1 final">}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Variables -->
+                        <div class="row">
+                          <div class="col s12 m12 ">
+                            <ul class="collapsible">
+                              <li>
+                                <div class="collapsible-header">Variables</div>
+                                <div class="collapsible-body">
+                                  <p class="codigo1">//Rectangulo</p>
+                                  <p class="codigo1">int anchoExtraX= xxx;</p>
+                                  <p class="codigo1">int anchoExtraY= xxx;</p>
+                                  <p class="codigo1">float altoRectangulo;</p>
+                                  <p class="codigo1">float anchoRectangulo;</p>
+                                  <p class="codigo1">---</p>
+                                  <p class="codigo1">//Poscion de texto</p>
+                                  <p class="codigo1">int posXpersona1= xxx;</p>
+                                  <p class="codigo1">int posXpersona2= xxx;</p>
+                                  <p class="codigo1">float posXinicial;</p>
+                                  <p class="codigo1">float posXfinal;</p>
+                                  <p class="codigo1">float posYtexto;</p>
+                                  <p class="codigo1">---</p>
+                                  <p class="codigo1">//Tamaño del texto</p>
+                                  <p class="codigo1">float anchoTexto= xxx;</p>
+                                  <p class="codigo1">float anchoMaximoTexto;</p>
+                                  <p class="codigo1">float altoTexto;</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Explicación y codigo 3 -->
+                    <div class="paso3">
+                      <div class = "row">
+                        <div class = "col s12 m12 l12">
+                          <h5 class="pasos -margin-top">Paso 3</h5>
+                          <p class="pre-codigo">Por último, se crea el metodo que dibuja el mensaje, cuyos parametros serán el arreglo que almacena el texto y el arreglo que guarda el ancho de cada texto.</p>
+                          <!-- Codigo-->
+                          <div class="card #f5f5f5 grey lighten-4">
+                            <div class="card-content black-text">
+                              <div class="codigo">
+                                <p class="codigo1 inicio">void dibujarMensaje (String p_texto, float p_anchoTexto) {</p>
+                                <p class="codigo2">calcular(p_anchoTexto1);</p>
+                                <p class="codigo2">if (posXinicial==posXpersona1) {</p>
+                                <p class="codigo3">fill (azul);//Mensaje</p>
+                                <p class="codigo3">rect (posXfinal, posY, anchoRectangulo, altoRectangulo);</p>
+                                <p class="codigo3">fill (blanco);//Texto</p>
+                                <p class="codigo3">text (p_texto, posXfinal + margenX, posY + margenY, p_anchoTexto, altoTexto);</p>
+                                <p class="codigo2">}</p>
+
+                                <p class="codigo2">if (posXinicial==posXpersona2) {</p>
+                                <p class="codigo3">fill (azul);//Mensaje</p>
+                                <p class="codigo3">rect (posXfinal, posY, anchoRectangulo, altoRectangulo);</p>
+                                <p class="codigo3">fill (blanco);//Texto</p>
+                                <p class="codigo3">text (p_texto, posXfinal + margenX, posY + margenY, p_anchoTexto, altoTexto);</p>
+                                <p class="codigo2">}</p>
+                                <p class="codigo1 final">}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Videojuego -->
+    <div class = "row" id="header-juego">
+      <div class = "col s12 m12 l12 xl10">
+        <ul class="collapsible">
+          <li>
+            <!-- Header -->
+            <div class="collapsible-header">
+              <div class = "row" id="header-videojuego">
+                <!-- Imagen -->
+                <div class = "col s12 m12 l12 xl12">
+                  <div class="quitar-margen"><img src="img/videojuego-card.jpg" alt="Luis" class="responsive-img"></div>
+                </div>
+                <!-- Descripcion -->
+                <div class = "col s12 m12 l12 xl12">
+                  <h5 class="titulos">Videojuego</h5>
+                  <p class="texto-descripcion">No siempre es necesario inventar un gran sistema o nuevas mecánicas para innovar y sorprender al jugador. A veces basta con descontextualizar y conceptualizar dentro un nuevo tipo de narrativo, tal como demostró el final[E] de Niel Autómata, sección de donde este juego desarrollado con objetos, imita todos sus elementos.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Body -->
+            <div class="collapsible-body">
+
+              <!-- Colisiones circulares -->
+              <div class = "row">
+                <div class = "col s12 m12 l12">
+                  <h5 class="subtitulo">Colisiones circulares</h5>
+                  <p class="pre-codigo">Consiste en calcular la distancia entre los puntos medios de los dos objetos. De esta forma, cuando la distancia sea menor a uno de los radios (puedes elegir cual usar), ocurre la colisión, cuyo resultado puedes modificar según necesites.</p>
+                  <!-- Codigo -->
+                  <div class="card #f5f5f5 grey lighten-4">
+                    <div class="card-content black-text">
+                      <div class="codigo">
+                       <p class="codigo1 inicio">void colisionCircular() {</p>
+                       <p class="codigo2">for (int i = 0; i < cantidadProyectiles; i++) {</p>
+                       <p class="codigo3">float distancia = dist(balaX, balaY, proyectilX[i], proyectilY[i]);</p>
+                       <p class="codigo3">if (distancia < radioProyectil) {</p>
+                       <p class="codigo4">balaX = width+1;</p>
+                       <p class="codigo4">balaY = -1;</p>
+                       <p class="codigo4">proyectilX = width+1;/p>
+                       <p class="codigo4">proyectilY = -1;</p>
+                       <p class="codigo3">}</p>
+                       <p class="codigo2">}</p>
+                       <p class="codigo1 final">}</p>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Imagen -->
+              <div class = "row">
+                <div class = "col s12 m12 l12">
+                  <img src="img/final-e.jpg" alt="Luis" class="responsive-img">
+                </div>
+              </div>
+
+              <!-- Colisiones rectangulares -->
+              <div class = "row">
+                <div class = "col s12 m12 l12">
+                  <h5 class="subtitulo">Colisiones rectangulares</h5>
+                  <p class="pre-codigo">Consiste en determinar los vértices de los dos objetos. Como ambos estarán en movimiento, es necesario que dichos puntos sean variables que mantengan las coordenadas correctas. De esta forma, si los objetos empiezan a compartir el mismo espacio, ocurre la colisión.</p>
+                  <!-- Codigo -->
+                  <div class="card #f5f5f5 grey lighten-4">
+                    <div class="card-content black-text">
+                      <div class="codigo">
+                       <p class="codigo1 inicio">void colisionRectangular() {</p>
+                       <p class="codigo2">for (int i = 0; i < cantidadEnemigos; i++) {</p>
+                       <p class="codigo3">float px1Rectangulo = enemigoX[i] - anchoEnemigo[i]/2);</p>
+                       <p class="codigo3">float px2Rectangulo = enemigoX[i] + anchoEnemigo[i]/2);</p>
+                       <p class="codigo3">float py1Rectangulo = enemigoY[i] - altoTexto;</p>
+                       <p class="codigo3">float py2Rectangulo = enemigoY[i];</p>
+                       <p class="codigo3">if (balaX >= px1Rectangulo  &&  balaY >= py1Rectangulo  &&  balaX <= px2Rectangulo  &&  balaY <=  py2Rectangulo) {</p>
+                       <p class="codigo4">balaX = width+1;</p>
+                       <p class="codigo4">balaY = -1;</p>
+                       <p class="codigo4">proyectilX = width+1;/p>
+                       <p class="codigo4">proyectilY = -1;</p>
+                       <p class="codigo3">}</p>
+                       <p class="codigo2">}</p>
+                       <p class="codigo1 final">}</p>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Circulo cromatico -->
+    <div class = "row" id="header-circulo">
+        <div class = "col s12 m12 l12 xl10">
+          <ul class="collapsible">
+            <!-- TP final-->
+            <li>
+              <div class="collapsible-header">
+                <!-- Header -->
+                <div class = "row">
+                  <div class = "col s12 m12 l12 xl12">
+                    <div class="quitar-margen"><img src="img/colores-card.jpg" alt="Luis" class="responsive-img"></div>
+                  </div>
+                  <!-- Descripcion -->
+                  <div class = "col s12 m12 l12 xl12">
+                    <h5 class="titulos">Circulo cromatico</h5>
+                    <p class="texto-descripcion">Una pareja separada por la distancia se forzada a cortar lo poco que queda de su relación. No es una conversación sencilla y ninguno de los dos lo quiere hacer, pero ambos son saben cuanto daño puede causar el esperar durante años y reecuentro que nunca parece llegar.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="collapsible-body">
+                <!-- Primera seccion -->
+                <div class="row">
+                  <div class="col s12 m12 ">
+                    <h5 class="subtitulo">La trigonemetria del circulo</h5>
+                    <p class="pre-codigo">La mayoría de modelos del circulo cromático que uno puede ver internet, a pesar de su forma, está conformado por múltiples rectángulos, los cuales, para que generen dicha forma circular, sus vértices han de estar ubicados en puntos muy especificados. Y sin duda, la forma más sencilla para obtenerlos es la trigonometría</p>
+                    <p class="pre-codigo">Primero es necesario definir ciertas variables. Por motivos de practicidad, fueron tomados de otro circulo cromatico, el cual, con una regla, se obtuvo los primeros cuatro vertices.</p>
+                    <!-- Variable -->
+                    <ul class="collapsible">
+                      <li>
+                        <div class="collapsible-header">Variables</div>
+                        <div class="collapsible-body">
+                          <p class="codigo1">float x1, y1, x2, y2, catetoA, catetoO, angle;</p>
+                          <p class="codigo1">float posX1, posY1, posX2, posY2, L1, L2;</p>
+                          <p class="codigo1">---</p>
+                          <p class="codigo1">//Vertice 1</p>
+                          <p class="codigo1">x1 = 377;</p>
+                          <p class="codigo1">y1 = 22;</p>
+                          <p class="codigo1">//Vertice 2</p>
+                          <p class="codigo1">posX1= 639;</p>
+                          <p class="codigo1">posY1= 22;</p>
+                          <p class="codigo1">---</p>
+                          <p class="codigo1">//Vertice 3</p>
+                          <p class="codigo1">posX2= 583;</p>
+                          <p class="codigo1">posY2= 234;</p>
+                          <p class="codigo1">---</p>
+                          <p class="codigo1">//Vertice 4</p>
+                          <p class="codigo1">x2 = 433;</p>
+                          <p class="codigo1">y2 = 234;</p>
+                          <p class="codigo1 inicio">angle= 360;</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Segunda seccion -->
+                <div class="row">
+                  <div class="col s12 l12">
+                    <h5 class="pasos -margin-top">Paso 1</h5>
+                    <p class="pre-codigo">Siguiendo las manecillas del reloj, el "rectangulo 0" corresponden a las 00:00 horas
+                    seguido del "rectangulo 1" ubicado en las 1:00 horas.</p>
+                    <!-- Codigo -->
+                    <div class="card #f5f5f5 grey lighten-4">
+                      <div class="card-content black-text">
+                        <div class="codigo">
+                          <p class="codigo1 inicio">//rectangulo 0</p>
+                          <p class="codigo1">fill(#FEDF4C);</p>
+                          <p class="codigo1">beginShape();</p>
+                          <p class="codigo1">vertex(x1, y1); //vertice 1;</p>
+                          <p class="codigo1">vertex(posX1, posY1); //vertice 2</p>
+                          <p class="codigo1">vertex(posX2, posY2);//vertice 3</p>
+                          <p class="codigo1">vertex(x2, y2);//vertice 4</p>
+                          <p class="codigo1 final">endShape();</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tercera seccion -->
+                <div class="row">
+                  <div class="col s12 l12">
+                    <h5 class="pasos -margin-top">Paso 2</h5>
+                    <p class="pre-codigo">Siguiendo las manecillas del reloj, el "rectangulo 0" corresponden a las 00:00 horas seguido del "rectangulo 1" ubicado en las 1:00 horas. Los vertices 1 y 4 del "rectangulo 1" repiten los valores del vertice 2 y 3 del "rectangulo 0" Para hallar el vertice 2 y 3 del "rectangulo 1" se requiere el uso de razones trigonometricas.</p>
+                    <p class="codigo3">vertice 2 = P1         distancia entre vertice 1 y 2 = L1</p>
+                    <p class="codigo3">L1= 639-377 </p>
+                    <p class="codigo3">vertice 3 = P2    distancia entre vertice 3 y 4 = L2</p>
+                    <p class="codigo3">L2= 583-433</p>
+                    <p class="pre-codigo">Al poseer 12 colores, sabemos que la inclinacion de cada rectangulo del circulo seran de 30 grados. Asi, al ir de izquirda a derecha, los angulos decresen, por la inclinacion del "rectangulo 1" es 330 grados</p>
+                    <p class="codigo3">360/12 colores = 30 grados</p>
+                    <p class="pre-codigo">Se aplican las misma 4 formulas con P1 y P2 en cada uno de los rectangulos para obtener las coordenadas necesarias para la construccion del circulo, empleando seno-coseno con radianes.</p>
+                    <p class="codigo3">CA = Cos(a)*L      x2= CA + x1</p>
+                    <p class="codigo3">CO = Sen(a)*L      y2= -(CO - y1)  (al decrecer, "y1" es negativo)</p>
+                    <p class="pre-codigo">A partir del "rectangulo 2", solo repite el codigo del "rectangulo 1" cambiando los colores. </p>
+
+                    <!-- Codigo -->
+                    <div class="card #f5f5f5 grey lighten-4">
+                      <div class="card-content black-text">
+                        <div class="codigo">
+                          <p class="codigo1 inicio">L1= posX1-x1;</p>
+                          <p class="codigo1">L2= posX2-x2;</p>
+                          <p class="codigo1">//rectangulo 1</p>
+                          <p class="codigo1">angle= angle - 30;</p>
+                          <p class="codigo1">catetoA= cos(radians(angle)) * L1;</p>
+                          <p class="codigo1">catetoO= sin(radians(angle)) * L1;</p>
+                          <p class="codigo1">x1= catetoA + posX1;</p>
+                          <p class="codigo1">y1= -(catetoO - posY1);</p>
+
+                          <p class="codigo1">angle= angle - 30;</p>
+                          <p class="codigo1">catetoA= cos(radians(angle)) * L2;</p>
+                          <p class="codigo1">catetoO= sin(radians(angle)) * L2;</p>
+                          <p class="codigo1">x2= catetoA + posX2;</p>
+                          <p class="codigo1">y2= -(catetoO - posY2);</p>
+
+                          <p class="codigo1">fill(#FEC546);</p>
+                          <p class="codigo1">beginShape();</p>
+                          <p class="codigo1">vertex(posX1, posY1);</p>
+                          <p class="codigo1">vertex(x1, y1);</p>
+                          <p class="codigo1">vertex(x2, y2);</p>
+                          <p class="codigo1">vertex(posX2, posY2);</p>
+                          <p class="codigo1 final">endShape();</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Imagen -->
+                <div class = "row">
+                  <div class = "col s12 m12 l12">
+                    <img src="img/circulo-cromatico.jpg" alt="Luis" class="responsive-img">
+                  </div>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Pie de pagina -->
+  <footer class="page-footer">
+    <div class="row">
+      <div class="col offset-s1 s12 offset-xl2 xl5">
+        <div class = "pie">
+          <h5 class="white-text">Diego</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+      </div>
+      <div class="col offset-s1 s12 xl5">
+        <h5 class="white-text pie">Ver en Github</h5>
+        <ul>
+          <div class = "pie">
+            <li><a class="grey-text text-lighten-3" href="https://github.com/DieandGo06/tecnomultimedia/tree/tp6">Novela Gráfica</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/DieandGo06/tecnomultimedia/tree/tp5">Videojuego</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/DieandGo06/tecnomultimedia/tree/tp2">Circulo Cromático</a></li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/inicia.js"></script>
+  <script src="js/scrollup.js"></script>
+</body>
+</html>
